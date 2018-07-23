@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script type="text/javascript">-->
+        <!--document.write('Hello world')-->
+        <!--document.write('<input type="color">')-->
+    <!--</script>-->
+    <!--<script src="jsTestDOM.js"></script>-->
+</head>
+<body>
+    <img name="icon" id="iconImg" src="imgs/iconSome.png" width="100" height="100">
+    <button class="btn">更改图片</button>
+    <script>
+
+        window.onload = function () {
+            var img = document.getElementsByName('icon')[0];
+            img.onmouseover = function () {
+                console.log('鼠标进入图片')
+            }
+
+            img.onmousemove = function () {
+                console.log('鼠标在图片上移动')
+            }
+
+            img.onmouseout = function () {
+                console.log('鼠标离开图片')
+            }
+
+            img.onclick = function () {
+                console.log('图片被点击')
+            }
+        }
+
+        // var img = document.getElementById('iconImg');
+        // var btn = document.getElementsByClassName('btn')[0];
+        //
+        // btn.onclick = function changeImg() {
+        //     img.src = (img.src.indexOf("imgs/swordGirl.png") > -1) ? "imgs/iconSome.png": "imgs/swordGirl.png";
+        // }
+    ////////////////////////////////////////////
+        // function changeImg() {
+        //     console.log('enter changeImg func')
+        //     var img = document.getElementsByTagName('img')[0];
+        //     console.debug(img.src)
+        //     if (img.src.indexOf("imgs/swordGirl.png") > -1) {
+        //         img.src = "imgs/iconSome.png";
+        //     } else {
+        //         img.src = "imgs/swordGirl.png";
+        //     }
+        // }
+    </script>
+
+</body>
+</html>

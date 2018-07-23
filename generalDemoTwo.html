@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        .title {
+            font-size: 120px;
+            color: green;
+            text-align: center;
+            display: none;
+        }
+
+        #countdown {
+            font-size: 100px;
+            color: green;
+            text-align: center;
+        }
+
+        #center {
+            text-align: center;
+            width: 120px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="title">感谢您的支持</div>
+    <div id="countdown">9</div>
+    <div id="center"><button id="start">开始倒计时</button></div>
+
+    <script>
+        window.onload = function () {
+
+            var countdown = document.getElementById('countdown');
+            var title = document.getElementsByClassName('title')[0];
+            var start = document.getElementById('start');
+
+            start.onclick = function () {
+                this.timer = setInterval(function() {
+                    countdown.innerText -= 1;
+
+                    if (countdown.innerText == 0) {
+                        clearInterval(this.timer);
+                        countdown.style.display = 'none';
+                        title.style.display = 'block';
+                    }
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>

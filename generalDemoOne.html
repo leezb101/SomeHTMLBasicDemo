@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button class="lastbtn">上一页</button>
+    <img class="img" src="imgs/iconSome.png" width="100" height="100">
+    <button class="nextbtn">下一页</button>
+
+    <script>
+        window.onload = function () {
+            var lastBtn = document.getElementsByClassName('lastbtn')[0];
+            var nextBtn = document.getElementsByClassName('nextbtn')[0];
+            var img = document.getElementsByClassName('img')[0];
+
+            lastBtn.onclick = function () {
+                if (img.src.lastIndexOf('imgs/iconSome.png') != -1) {
+                    img.src = 'imgs/swordGirl.png';
+                } else {
+                    img.src = 'imgs/iconSome.png';
+                }
+            }
+
+            nextBtn.onclick = function () {
+                if (img.src.lastIndexOf('imgs/iconSome.png') != -1) {
+                    img.src = 'imgs/swordGirl.png';
+                } else {
+                    img.src = 'imgs/iconSome.png';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
